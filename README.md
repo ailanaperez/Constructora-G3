@@ -26,9 +26,8 @@ ofrecer un formulario de contacto para consultas.
 - Formspree (formulario de contacto)
 
 ## Sitio publicado
-
-https://TUUSUARIO.github.io/NOMBRE-DEL-REPO/
+https://ailanaperez.github.io/Constructora-G3/
 
 ## Autores
 
-- Analia Perez
+Analia Perez
