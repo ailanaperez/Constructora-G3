@@ -567,10 +567,67 @@ footer p {
 }
  
  
+.caracteristicas {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.caracteristicas div {
+    flex: 1;
+    min-width: 90px;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.caracteristicas strong {
+    display: block;
+    font-size: 22px;
+    color: #12355b;
+}
+
+.caracteristicas span {
+    font-size: 14px;
+    color: #555;
+}
+
+
 /* =========================
    RESPONSIVE (SIEMPRE AL FINAL)
 ========================= */
  
+/* ---- TABLET (hasta 1024px) ---- */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    .detalle-ph {
+        margin: 40px auto;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .detalle-info h1 {
+        font-size: 32px;
+    }
+
+    .detalle-info p {
+        font-size: 17px;
+    }
+
+    .miniaturas img {
+        width: 80px;
+        height: 65px;
+    }
+}
+
+
+/* ---- CELULAR GRANDE / TABLET CHICA (hasta 768px) ---- */
 @media (max-width: 768px) {
  
     header {
@@ -682,5 +739,117 @@ footer p {
     .formulario button {
         width: 100%;
     }
+
+    .detalle-ph {
+        margin: 30px auto;
+        gap: 25px;
+        padding: 20px 15px;
+        align-items: stretch;
+    }
+
+    .detalle-info h1 {
+        font-size: 28px;
+    }
+
+    .miniaturas {
+        flex-wrap: wrap;
+    }
+
+    .btn-whatsapp {
+        display: block;
+        text-align: center;
+    }
 }
- 
+
+
+/* ---- CELULAR CHICO (hasta 480px) ---- */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .detalle-ph {
+        margin: 20px auto;
+        padding: 15px 10px;
+    }
+
+    .detalle-info h1 {
+        font-size: 24px;
+    }
+
+    .detalle-info p {
+        font-size: 16px;
+    }
+
+    .caracteristicas {
+        gap: 10px;
+    }
+
+    .caracteristicas div {
+        min-width: 80px;
+        padding: 12px 8px;
+    }
+
+    .caracteristicas strong {
+        font-size: 18px;
+    }
+
+    .miniaturas img {
+        width: calc(33.333% - 10px);
+        height: 70px;
+    }
+}
+
+
+/* =========================
+   BOTÓN VOLVER (detalle)
+========================= */
+
+.volver-contenedor {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding: 0 30px;
+}
+
+.btn-volver {
+    display: inline-block;
+    color: #12355b;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    transform: translateX(-5px);
+    text-decoration: underline;
+}
+
+.volver-contenedor + .detalle-ph {
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .volver-contenedor {
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .volver-contenedor {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .volver-contenedor {
+        padding: 0 10px;
+    }
+}
